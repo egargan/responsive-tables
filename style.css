@@ -7,6 +7,8 @@ body {
 }
 
 table {
+    white-space: nowrap;
+
     border-collapse: collapse;
     font-size: small;
 }
