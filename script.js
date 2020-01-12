@@ -97,7 +97,7 @@ class PriorityColumn {
 
         // Get 'header' cell at top of column, where we expect a priority value
         var headerCell = table.rows[0].cells[columnIndex];
-        this.priority = headerCell.dataset.priority;
+        this.priority = parseInt(headerCell.dataset.priority);
 
         // Keep an updated width reading so we know if we can
         // fit this column back into the table
