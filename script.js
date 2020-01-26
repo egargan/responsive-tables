@@ -29,6 +29,15 @@ class ResponsiveTable {
                 instance.unhideNextColumn();
             }
         });
+
+        let hiddenColIndicatorContainer = document.createElement('div');
+        hiddenColIndicatorContainer.classList.add('hidden-col-indicator');
+
+        let indicatorEllipses = document.createElement('div');
+        indicatorEllipses.innerHTML = '...';
+
+        hiddenColIndicatorContainer.appendChild(indicatorEllipses);
+        container.appendChild(hiddenColIndicatorContainer);
     }
 
     // Sorts PriorityColumn elements in the given array by their priority values,

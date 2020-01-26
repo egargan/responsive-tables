@@ -4,6 +4,7 @@ body {
 
 .container {
     padding: 20px;
+    display: flex;
 }
 
 table {
@@ -13,8 +14,26 @@ table {
     font-size: small;
 }
 
-table, td, tr, th {
+table, td, tr, th, .hidden-col-indicator {
     border: 1px solid #ccc;
+}
+
+.hidden-col-indicator {
+    display: flex;
+    align-items: center;
+    border-left: 0;
+    padding: 5px;
+}
+
+.hidden-col-indicator:hover {
+    background: #eee;
+    cursor: pointer;
+
+    user-select: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
 }
 
 th, td {
