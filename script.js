@@ -34,24 +34,13 @@ class ResponsiveTable {
     // Sorts PriorityColumn elements in the given array by their priority values,
     // subsorting by their initial index such that right-most columns are hidden first.
     prioritySortColumns(unsortedColumns) {
-        // Add temporary helper property for custom subsorting
-        unsortedColumns.forEach(function(col, index) {
-            col.indexInUnsortedList = index;
-        });
-
         unsortedColumns.sort(function(a, b) {
             if (a.priority == b.priority) {
-                return (a.indexInRawList > b.indexInRawList) ? 1 : -1;
+                return -1;
             }
             else {
                 return (a.priority > b.priority) ? 1 : -1;
             }
-        });
-
-        // Delete helper property - TODO: this smells, doesn't feel right to
-        // be adding and removing with properties like this just for convenience?
-        unsortedColumns.forEach(function(col) {
-            delete col.indexInUnsortedList;
         });
     }
 
